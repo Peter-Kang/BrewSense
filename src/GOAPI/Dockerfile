@@ -1,7 +1,7 @@
 ARG GO_API_PORT
 FROM golang:latest
 
-WORKDIR /app
+WORKDIR /opt/app/api
 
 COPY go.mod go.sum ./
 RUN go mod download
