@@ -1,7 +1,8 @@
 version: "0"
   
 services:
-  db:
+  #database
+  caffeinecounterdatabase:
     image:  mongo:latest
     container_name: CaffeineCounterDB
     ports:
@@ -15,7 +16,7 @@ services:
       - .env
     expose:
       - 27017:27017
-  #mongo client
+  #mongo ui 
   db-express:
     image: mongo-express
     container_name: caffeinecounterdb-express
@@ -26,4 +27,5 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD = ${MONGO_INITDB_ROOT_PASSWORD}
       - ME_CONFIG_MONGODB_URL=${MONGODB_EXPRESS_URL}
     depends_on:
-      - db
+      - caffeinecounterdatabase
+  #Go
