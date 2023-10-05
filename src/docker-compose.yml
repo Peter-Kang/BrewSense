@@ -1,0 +1,29 @@
+version: "0"
+  
+services:
+  db:
+    image:  mongo:latest
+    container_name: CaffeineCounterDB
+    ports:
+      #revist ports for something thats not default
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME = ${MONGO_INITDB_ROOT_USERNAME} 
+      - MONGO_INITDB_ROOT_PASSWORD = ${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_INITDB_DATABASE =  ${MONGO_INITDB_DATABASE}
+    env_file:
+      - .env
+    expose:
+      - 27017:27017
+  #mongo client
+  db-express:
+    image: mongo-express
+    container_name: caffeinecounterdb-express
+    ports: 
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME = ${MONGO_INITDB_ROOT_USERNAME} 
+      - ME_CONFIG_MONGODB_ADMINPASSWORD = ${MONGO_INITDB_ROOT_PASSWORD}
+      - ME_CONFIG_MONGODB_URL=${MONGODB_EXPRESS_URL}
+    depends_on:
+      - db
