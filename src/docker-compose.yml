@@ -7,15 +7,16 @@ services:
     container_name: CaffeineCounterDB
     ports:
       #revist ports for something thats not default
-      - 27017:27017
+      - ${MONGO_PORT}:${MONGO_PORT}
     environment:
+      - MONGO_PORT = ${MONGO_PORT}
       - MONGO_INITDB_ROOT_USERNAME = ${MONGO_INITDB_ROOT_USERNAME} 
       - MONGO_INITDB_ROOT_PASSWORD = ${MONGO_INITDB_ROOT_PASSWORD}
       - MONGO_INITDB_DATABASE =  ${MONGO_INITDB_DATABASE}
     env_file:
       - .env
     expose:
-      - 27017:27017
+      - ${MONGO_PORT}:${MONGO_PORT}
   #mongo ui 
   db-express:
     image: mongo-express
@@ -28,4 +29,3 @@ services:
       - ME_CONFIG_MONGODB_URL=${MONGODB_EXPRESS_URL}
     depends_on:
       - caffeinecounterdatabase
-  #Go

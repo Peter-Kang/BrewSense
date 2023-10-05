@@ -1,3 +1,4 @@
+ARG GO_API_PORT
 FROM golang:latest
 
 WORKDIR /app
@@ -9,6 +10,6 @@ RUN go mod download
 COPY *.go ./
 RUN go build -o gindoc
 
-EXPOSE 8080
+EXPOSE $GO_API_PORT
 
 CMD ["./gindoc"]
