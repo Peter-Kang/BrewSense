@@ -22,3 +22,16 @@
 
 # Go workspace file
 go.work
+
+#react stuff
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+npm-debug.log
