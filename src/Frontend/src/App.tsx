@@ -6,7 +6,14 @@ function App() {
 
   return (
     <>
-    
+      <div className="cloud"></div>
+      <div className="cloud"></div>
+      <div className="cloud"></div>
+      <div className="cloud"></div>
+      <div className="cloud"></div>
+      <div className="cloud"></div>
+      <div className="cloud"></div>
+      <div className="cloud"></div>
     </>
   )
 }

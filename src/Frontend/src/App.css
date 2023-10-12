@@ -40,3 +40,51 @@
 .read-the-docs {
   color: #888;
 }
+
+/*
+Background
+*/
+body {
+  background: #87CEEB; /* Set the background color to a light blue color */
+  overflow: hidden; /* Hide any content overflowing the body */
+}
+
+.cloud {
+  width: 200px;
+  height: 80px;
+  background: #fff; /* Cloud color, typically white */
+  position: absolute;
+  border-radius: 100px;
+  animation: moveCloud 20s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes moveCloud {
+  0% {
+    left: -200px; /* Starting position outside the left edge of the viewport */
+  }
+  100% {
+    left: 100%; /* Ending position outside the right edge of the viewport */
+  }
+}
+
+/* Create multiple cloud divs with different sizes and positions for a realistic effect */
+.cloud:nth-child(1) {
+  top: 20%;
+  transform: scale(0.6);
+  animation-duration: 25s;
+}
+
+.cloud:nth-child(2) {
+  top: 40%;
+  transform: scale(0.8);
+  animation-duration: 30s;
+}
+
+.cloud:nth-child(3) {
+  top: 10%;
+  transform: scale(0.5);
+  animation-duration: 22s;
+}
+
+/* Add more .cloud elements as needed for your design */
+
