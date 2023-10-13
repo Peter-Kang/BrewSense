@@ -88,13 +88,13 @@ body {
 
 .cloud:nth-child(4) {
   top: 35%;
-  transform: scale(0.6);
-  animation-duration: 25s;
+  transform: scale(0.4);
+  animation-duration: 65s;
 }
 
 .cloud:nth-child(5) {
   top: 15%;
-  transform: scale(0.4);
+  transform: scale(0.25);
   animation-duration: 45s;
 }
 
