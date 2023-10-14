@@ -1,18 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import Clouds from './componets/cloud'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="cloud"></div>
-      <div className="cloud"></div>
-      <div className="cloud"></div>
-      <div className="cloud"></div>
-      <div className="cloud"></div>
-      <div className="cloud"></div>
-      <div className="cloud"></div>
+     <Clouds />
     </>
   )
 }
