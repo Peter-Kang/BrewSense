@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Clouds from './componets/cloud'
+import Clouds from './components/cloud'
 
 function App() {
-
   return (
     <>
      <Clouds />
