@@ -49,6 +49,16 @@ body {
   overflow: hidden; /* Hide any content overflowing the body */
 }
 
+.body-clear
+{
+  background: #87CEEB;
+}
+
+.body-grey
+{
+  background: #909D9E;
+}
+
 .cloud {
   width: 200px;
   height: 80px;
