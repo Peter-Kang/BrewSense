@@ -65,6 +65,7 @@ body {
   background: #fff; /* Cloud color, typically white */
   position: absolute;
   border-radius: 100px;
+  z-index: 0;
   animation: moveCloud 20s linear infinite; /* Adjust animation duration as needed */
 }
 
@@ -122,3 +123,15 @@ body {
 
 /* Add more .cloud elements as needed for your design */
 
+/* Layout */
+body
+{
+  display: grid;
+	height: 100vh;
+	grid-template-rows: auto;
+	grid-template-columns: 15px 1fr 15px;
+	grid-template-areas:
+		'. nav   .'
+		'. content  .';
+	gap: 1em;
+}
